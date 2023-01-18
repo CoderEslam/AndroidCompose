@@ -13,10 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.doubleclick.androidcompose.ui.theme.AndroidComposeTheme
+import androidx.compose.ui.tooling.preview.Preview
 
 /**
  * Created By Eslam Ghazy on 1/18/2023
  */
+@Preview
 @Composable
 fun RowScope.CusRow(weight: Float, color: Color = MaterialTheme.colors.primary) {
     AndroidComposeTheme {

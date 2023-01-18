@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -19,8 +20,9 @@ import androidx.compose.ui.unit.sp
  * Created By Eslam Ghazy on 1/18/2023
  */
 
+@Preview
 @Composable
-fun BoxLayout(){
+fun BoxLayout() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -28,8 +30,7 @@ fun BoxLayout(){
         Box(
             modifier = Modifier
                 .background(Color.Blue)
-                .verticalScroll(rememberScrollState())
-            , contentAlignment = Alignment.Center
+                .verticalScroll(rememberScrollState()), contentAlignment = Alignment.Center
         ) {
             Box(
                 modifier = Modifier

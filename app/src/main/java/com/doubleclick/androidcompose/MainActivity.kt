@@ -20,7 +20,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.doubleclick.androidcompose.Col.Col
 import com.doubleclick.androidcompose.Row.CusRow
+import com.doubleclick.androidcompose.Text.AnnotatText
 import com.doubleclick.androidcompose.Text.CustomText
+import com.doubleclick.androidcompose.Text.CustomTextRepeat
 import com.doubleclick.androidcompose.ui.theme.AndroidComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -33,7 +35,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background,
                 ) {
-                    BoxLayout()
+                    Column {
+                        AnnotatText()
+                        CustomTextRepeat()
+                    }
+
                 }
             }
         }
@@ -50,7 +56,6 @@ fun Greeting() {
 @Composable
 fun DefaultPreview() {
     AndroidComposeTheme {
-
     }
 }
 
