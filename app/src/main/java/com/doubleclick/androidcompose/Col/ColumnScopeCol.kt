@@ -1,0 +1,32 @@
+package com.doubleclick.androidcompose.Col
+
+import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.Colors
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
+import androidx.compose.material.Surface
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+import com.doubleclick.androidcompose.ui.theme.AndroidComposeTheme
+
+/**
+ * Created By Eslam Ghazy on 1/18/2023
+ */
+@Composable
+fun ColumnScope.Col(weight: Float, color: Color = MaterialTheme.colors.primary) {
+    AndroidComposeTheme {
+        Surface(
+            modifier = Modifier
+                .width(200.dp)
+                .height(50.dp)
+                .weight(weight),
+            color = color
+        ) {
+
+        }
+    }
+}
