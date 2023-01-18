@@ -3,7 +3,11 @@ package com.doubleclick.androidcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -12,6 +16,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.doubleclick.androidcompose.Col.Col
 import com.doubleclick.androidcompose.Row.CusRow
 import com.doubleclick.androidcompose.Text.CustomText
@@ -27,14 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background,
                 ) {
-                    Row(
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        CusRow(1f, Color.Blue)
-                        CusRow(1f, Color.Red)
-                        CusRow(1f, Color.Green)
-                    }
+                    BoxLayout()
                 }
             }
         }
@@ -42,8 +41,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greeting() {
+
 }
 
 
@@ -51,10 +50,7 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     AndroidComposeTheme {
-        Column {
-            Col()
 
-        }
     }
 }
 
